@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">Movil_Soundwater</string>
+    <string name="app_name">Soundwater</string>
+
+    <!-- Main Screen -->
+    <string name="square_button">Botón cuadrado</string>
+    <string name="circle_button">Botón círculo</string>
+    <string name="back_button">Botón atrás</string>
+
+    <!-- Home Fragment -->
+    <string name="inicio">Inicio</string>
+    <string name="recordatorios">Recordatorios</string>
+    <string name="permisos">Permisos</string>
+    <string name="ingrese_texto_aqu">Ingrese texto aquí</string>
+
+    <!-- Interval Reminder Fragment -->
+    <string name="intervalo">Intervalo</string>
+    <string name="personalizado">Personalizado</string>
+    <string name="min_30">30 min</string>
+    <string name="hora_1">1 hora</string>
+    <string name="horas_2">2 horas</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="guardar">Guardar</string>
+    <string name="volver">Volver</string>
+
+    <!-- Personalized Reminder Fragment -->
+    <string name="modo_recordatorio">Modo de recordatorio</string>
+    <string name="horas_sugeridas">Horas sugeridas</string>
+    <string name="siguiente_recordatorio">Siguiente Recordatorio</string>
+    <string name="desactivar">Desactivar</string>
+
+    <!-- Permissions Fragment -->
+    <string name="sonido_de_alarma">Sonido de alarma</string>
+    <string name="vibracion">Vibración</string>
+
+    <!-- Notification Channel -->
+    <string name="notification_channel_name">Recordatorios</string>
+    <string name="notification_channel_description">Notificaciones para recordatorios de agua</string>
 </resources>

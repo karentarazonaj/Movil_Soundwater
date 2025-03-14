@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.movil_soundwater.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_reminderListFragment"
+            app:destination="@id/reminderListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_permissionsFragment"
+            app:destination="@id/permissionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reminderListFragment"
+        android:name="com.example.movil_soundwater.ui.reminderlist.ReminderListFragment"
+        android:label="Recordatorios"
+        tools:layout="@layout/fragment_reminder_list">
+        <action
+            android:id="@+id/action_reminderListFragment_to_intervalReminderFragment"
+            app:destination="@id/intervalReminderFragment" />
+        <action
+            android:id="@+id/action_reminderListFragment_to_personalizedReminderFragment"
+            app:destination="@id/personalizedReminderFragment" />
+        <action
+            android:id="@+id/action_reminderListFragment_to_reminderDetailFragment"
+            app:destination="@id/reminderDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/intervalReminderFragment"
+        android:name="com.example.movil_soundwater.ui.reminderdetail.IntervalReminderFragment"
+        android:label="Intervalo"
+        tools:layout="@layout/fragment_interval_reminder">
+        <action
+            android:id="@+id/action_intervalReminderFragment_to_reminderListFragment"
+            app:destination="@id/reminderListFragment"
+            app:popUpTo="@id/reminderListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_intervalReminderFragment_to_personalizedReminderFragment"
+            app:destination="@id/personalizedReminderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalizedReminderFragment"
+        android:name="com.example.movil_soundwater.ui.reminderdetail.PersonalizedReminderFragment"
+        android:label="Personalizado"
+        tools:layout="@layout/fragment_personalized_reminder">
+        <action
+            android:id="@+id/action_personalizedReminderFragment_to_reminderListFragment"
+            app:destination="@id/reminderListFragment"
+            app:popUpTo="@id/reminderListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_personalizedReminderFragment_to_intervalReminderFragment"
+            app:destination="@id/intervalReminderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reminderDetailFragment"
+        android:name="com.example.movil_soundwater.ui.reminderdetail.ReminderDetailFragment"
+        android:label="Detalle"
+        tools:layout="@layout/fragment_reminder_detail">
+        <argument
+            android:name="reminderId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/permissionsFragment"
+        android:name="com.example.movil_soundwater.ui.permissions.PermissionsFragment"
+        android:label="Permisos"
+        tools:layout="@layout/fragment_permissions" />
+</navigation>
