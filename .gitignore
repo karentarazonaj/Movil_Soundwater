@@ -14,3 +14,7 @@
 .cxx
 local.properties
 .qodo
+.vscode
+.idea
+.gradle
+build/
